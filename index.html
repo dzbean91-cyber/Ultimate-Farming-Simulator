@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Ultimate Farm Simulator</title>
+<style>
+body{background:#0f0f0f;color:#eee;font-family:Arial;text-align:center}
+button,input,select{padding:8px;margin:4px;border-radius:6px;border:none}
+button{background:#00c3ff;cursor:pointer}
+button:hover{background:#0099cc}
+.log{background:#111;height:260px;overflow:auto;margin-top:15px;padding:10px;border-radius:10px}
+.success{color:#00ff88}
+.error{color:#ff4d4d}
+.warning{color:#ffcc00}
+</style>
+</head>
+<body>
+
+<h1>🔥 Ultimate Signing + Phone Farm Simulator 🔥</h1>
+
+<h2>📜 Certificate</h2>
+<button onclick="createCert()">Create Certificate</button>
+<select id="certList"></select><br>
+<button onclick="signApp()">Sign App</button>
+<button onclick="signWithRoot()">Sign App(Root Certificate)</button>
+
+<h2>🛡 Protection</h2>
+<label><input type="checkbox" id="antiAudit"> Anti BanPan</label>
+<label><input type="checkbox" id="hideRoot"> Hide Root</label>
+
+<h2>👑 Admin Root</h2>
+<input id="adminIP" placeholder="Admin IP">
+<input id="adminPass" type="password" placeholder="Password">
+<button onclick="createRootCert()">Create Root Certificate</button>
+
+<hr>
+
+<h2>📱 Phone Farm</h2>
+
+<input id="phoneName" placeholder="Phone Name">
+<select id="phoneRegion">
+<option>Asia</option>
+<option>EU</option>
+<option>NA</option>
+<option>China</option>
+<option>LATAM</option>
+</select>
+<label><input type="checkbox" id="phoneRoot"> Rooted</label>
+<button onclick="addPhone()">Add Phone</button>
+
+<br><br>
+
+<select id="phoneList"></select><br>
+<button onclick="togglePhone()">Toggle Online</button>
+<button onclick="lockPhone()">Lock Phone</button>
+<button onclick="auditCheck()">BanPan</button>
+<button onclick="gmatCheck()">GMAT</button><br>
+
+<label><input type="checkbox" id="antiBanModule"> AntiBan Module</label>
+
+<h3>💰 Earnings</h3>
+<button onclick="earnMoney()">Earn Once</button>
+<p>Total Money: <span id="moneyDisplay">0</span> $</p>
+
+<h3>💸 Spam Mode</h3>
+<button onclick="startSpam()">Start Spam</button>
+<button onclick="stopSpam()">Stop Spam</button>
+<p>Status: <span id="spamStatus">OFF</span></p>
+
+<h3>📞 Call Simulation</h3>
+<input id="callNumber" placeholder="0xxxxxxxxxx">
+<button onclick="makeCall()">Call</button>
+
+<h2>Tools</h2>
+<button onclick="yuenaAI()">YuenaAI Load Simulation</button>
+
+<div class="log" id="log"></div>
+
+<script src="system.js"></script>
+</body>
+</html>
